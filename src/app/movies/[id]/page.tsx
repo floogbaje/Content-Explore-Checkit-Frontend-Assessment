@@ -15,15 +15,9 @@ import { Breadcrumb } from '@/components/Breadcrumb/Breadcrumb';
 import { MovieCard } from '@/components/MovieCard/MovieCard';
 import type { MovieDetail, CastMember } from '@/types/movies';
 
-// ── Page params shape ──────────────────────────
-
 interface PageProps {
   params: { id: string };
 }
-
-// ── Static generation ──────────────────────────
-// Pre-builds the first page of popular movies at
-// build time. All other IDs render on-demand.
 
 export async function generateStaticParams() {
   return getStaticMovieParams();
@@ -88,7 +82,7 @@ export async function generateMetadata(
   }
 }
 
-// ── Page component ─────────────────────────────
+// ── Page component ──
 
 export default async function MovieDetailPage({ params }: PageProps) {
   const id = Number(params.id);
@@ -340,11 +334,6 @@ export default async function MovieDetailPage({ params }: PageProps) {
               role="list"
             >
               {similarMovies.map((film, index) => {
-                // Re-use genreMap stub — similar movies only show
-                // genre IDs; we pass an empty map since building
-                // a full genre map here would require an extra fetch.
-                // Genre names on the similar cards are a nice-to-have,
-                // not critical UX on this page.
                 return (
                   <li key={film.id}>
                     <MovieCard
