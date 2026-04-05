@@ -5,7 +5,7 @@ A high performance movie discovery  web application
 **Role:** Frontend Engineer
 **API:** [The Movie Database (TMDB)](https://developer.themoviedb.org/docs)
 **Stack:** Next.js 15 · TypeScript · Tailwind CSS · TanStack Query
-**Deployment:** [To be added when done]
+**Deployment:** https://content-explore-checkit-frontend-as.vercel.app/
 **Repository:** Content-Explore-Checkit-Frontend-Assessment
 
 ## Quick Start
